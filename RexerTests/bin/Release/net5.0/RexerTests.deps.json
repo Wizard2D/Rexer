@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "RexerTests/1.0.0": {
+        "dependencies": {
+          "Rexer": "1.0.0"
+        },
+        "runtime": {
+          "RexerTests.dll": {}
+        }
+      },
+      "Rexer/1.0.0": {
+        "runtime": {
+          "Rexer.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RexerTests/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Rexer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

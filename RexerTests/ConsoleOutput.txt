@@ -1,0 +1,6 @@
+﻿Output from Console:
+Type: STR, Defined As: "HelloWorld"
+Type: NUM, Defined As: 123
+
+Input to Lexer:
+"HelloWorld" 123
