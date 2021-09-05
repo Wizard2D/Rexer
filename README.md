@@ -7,7 +7,7 @@ An example of usage is available in the ``RexerTests`` folder.
 
 # How to Get?
 
-You can get the library from the NuGet page at ``insert page here`` or you can build it yourself(refer to the ``How to Build`` section.)
+You can get the library from the NuGet page at ``https://www.nuget.org/packages/Rexer/1.0.0`` or you can build it yourself(refer to the ``How to Build`` section.)
 On Visual Studio you aswell may use ``Install-Package Rexer``
 
 # How to Build?
