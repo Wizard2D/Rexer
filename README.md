@@ -13,6 +13,7 @@ On Visual Studio you aswell may use ``Install-Package Rexer``
 # How to Build?
 
 Clone the repository to a folder of choice with ``git clone https://github.com/Wizard2D/Rexer.git``.
+Unpack the folders as needed.
 
 `` With Visual Studio ``
 Open the project in Visual Studio(2019 needed.) then build it with <kbd>Ctrl</kbd> + <kbd>F5</kbd> or by pressing the ``Build`` button in the Project tab or by rightclicking on the project in the explorer.
