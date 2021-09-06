@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Documentation for Rexer</title>
+    <link id="linkrel" rel="stylesheet" href="index.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <center>
+        <h1>Introduction</h1>
+        <p>Rexer is a simple regex lexer that is easy to use.</p>
+        <p>This is a documentation on how to use Rexer and how to not fail your projects.</p>
+        <div>
+            <p> </p>
+        </div>
+        <h1>How to Get Rexer?</h1>
+        <p>You can get Rexer through NuGet or building it yourself</p>
+        <p>I will use the NuGet version however as it is easier to get than building it.</p>
+        <p>First of all, to install NuGet you need to use the <code>Install-Package Rexer</code> command.</p>
+        <p>Then add <code>using Rexer;</code> at the top of your code.</p>
+        <div>
+            <p> </p>
+        </div>
+        <h1>Starting off...</h1>
+        <p>First of all, define your test code, I will be using <code>"HelloWorld"</code></p>
+        <p>Then I will make a new Lexer object with <code>Lexer _lexer = new Lexer();</code></p>
+        <p>Your current code should look like this: </p>
+        <div id="codeElement">
+            <code id="codeExample">
+                string _code = "\"HelloWorld\"";
+                Lexer _lexer = new Lexer();
+            </code>
+            <button id="copy" onclick="navigator.clipboard.writeText(document.getElementById('codeExample').innerHTML)">Copy</button>
+        </div>
+        <p>Afterwards we want to create a lexer definition for a string. We will use the AddLexerDefintion function.</p>
+        <div id="codeElement">
+            <code id="codeExample2">
+                string _code = "\"HelloWorld\"";
+                Lexer _lexer = new Lexer();
+                _lexer.AddLexerDefintion(new LexerDefinition("\\\"([^']+)\\\"", TokenType.STR));
+            </code>
+            <button id="copy" onclick="navigator.clipboard.writeText(document.getElementById('codeExample2').innerHTML)">Copy</button>
+        </div>
+        <p>But before all of that we have to create our TokenType enum.</p>
+        <p>Make an enum that derives from byte</p>
+        <p>Add your types.</p>
+        <p>Make an unknown token and set it to 255.</p>
+        <div id="codeElement">
+            <code id="codeExample3">
+                enum TokenType : byte
+                {
+                STR,
+                UNK = 255
+                }
+            </code>
+            <button id="copy" onclick="navigator.clipboard.writeText(document.getElementById('codeExample3').innerHTML)">Copy</button>
+        </div>
+        <p>Now you should be fine, just change the LexerDefintion token type to match yours.</p>
+        <p>Now you have to set the Lexer to use your unknown token type definition</p>
+        <code>_lexer.UnknownToken = TokenType.UNK;</code>
+        <h1>The Finishing Touches.</h1>
+        <p>Now all you have to do is run the doString function with the text, and output it as a <code>'List<Token>'</code></p>
+        <div id="codeElement">
+            <code id="codeExample4">
+                string _code = "\"HelloWorld\"";
+                Lexer _lexer = new Lexer();
+                _lexer.AddLexerDefintion(new LexerDefinition("\\\"([^']+)\\\"", TokenType.STR));
+                List< Token > _tokens = _lexer.doString(_code);
+                //And to test the code.
+                foreach(Token t in _tokens)
+                {
+                    Console.WriteLine($"Type: {t._type}, Defined As: {t._def}");
+                }
+            </code>
+            <button id="copy" onclick="navigator.clipboard.writeText(document.getElementById('codeExample4').innerHTML)">Copy</button>
+            <h1>End.</h1>
+            <p>Now you should've turned your string into tokens, if there was a problem with the code, open and issue on the github, and someone will surely help.</p>
+        </div>
+
+    </center>
+    <button id="darkMode" onclick="setDarkMode();">Dark Mode</button>
+</body>
+</html>

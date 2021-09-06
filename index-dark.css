@@ -1,0 +1,23 @@
+﻿body {
+    background-image: linear-gradient(to right, black, #272727);
+}
+h1 {
+    font-family: 'Lucida Console';
+    color: white;
+}
+
+p {
+    font-family: 'Lucida Console';
+    color: white;
+}
+
+a {
+    color: lightgray;
+    font-family: 'Lucida Console';
+}
+code{
+    color: white;
+}
+button {
+    margin-top: 20px;
+}
